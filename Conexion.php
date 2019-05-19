@@ -4,8 +4,8 @@ class Conexion {
     private function __construct(){
         try{
             self::$con = new PDO(
-                'mysql:charset=utf8mb4;host=fastpizza.database.windows.net;port=3306;dbname=pizzas', 
-                'oliver', 'Sortilegi0');
+                'mysql:charset=utf8mb4;host=fastpiza-mysqldbserver.mysql.database.azure.com;port=3306;dbname=pizza', 
+                'oliver@fastpiza-mysqldbserver', 'Sortilegi0');
             self::$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             self::$con->setAttribute(PDO::ATTR_PERSISTENT, false);    
         }catch (PDOException $e){
